@@ -86,7 +86,6 @@ function switchMenuDeu(){
 	$('#nav-side-menu').load('sidemenuDEU.html', function(){
 		attachClickHandlers();
 	});
-	alert('test');
 	loadPage();
 }
 function switchMenuDan(){
