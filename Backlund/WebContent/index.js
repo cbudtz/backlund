@@ -86,6 +86,7 @@ function switchMenuDeu(){
 	$('#nav-side-menu').load('sidemenuDEU.html', function(){
 		attachClickHandlers();
 	});
+	alert('test');
 	loadPage();
 }
 function switchMenuDan(){
@@ -107,5 +108,5 @@ function switchLangEng(){
 function switchLangDeu(){
 	lang='DEU';
 	page='home';
-	switchMenuDeu()
+	switchMenuDeu();
 }
