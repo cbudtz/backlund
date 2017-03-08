@@ -28,7 +28,10 @@ var eng = {'Produkter':'Products',
 }
 var deu = {};
 var dan = {};
-
+$.ajaxSetup ({
+    // Disable caching of AJAX responses
+    cache: false
+});
 	
 
 $(document).ready(function(){
@@ -39,6 +42,14 @@ $(document).ready(function(){
 
 	
 });
+window.addEventListener('popstate', function(e) {
+	if (e.state){
+		page=e.state.page;
+		lang=e.state.lang;
+		$('#maincontainer').load('pages' + lang + "/" + page + ".html");
+	}
+});
+
 
 function attachClickHandlers(){
 	$('li.linked, ul.linked li').click(function(event) {
@@ -72,8 +83,11 @@ function attachClickHandlers(){
 	});
 }
 
-function loadPage(){
-	
+function loadPage(newPage){
+	history.pushState({'page':page, 'lang': lang}, page);
+	if (newPage){
+		page=newPage;
+	}
 	$('#maincontainer').load('pages' + lang + "/" + page + ".html");
 	
 }
