@@ -161,7 +161,7 @@
 	padding: 15px;
 }
 
-@media ( max-width : 800px) {
+@media ( max-width : 950px) {
 	.nav-side-menu {
 		position: relative;
 		width: 100%;
@@ -187,7 +187,7 @@
 	}
 }
 
-@media ( min-width : 800px) {
+@media ( min-width : 950px) {
 	.nav-side-menu .menu-list .menu-content {
 		display: block;
 	}

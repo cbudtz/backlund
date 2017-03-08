@@ -43,13 +43,16 @@ $(document).ready(function(){
 function attachClickHandlers(){
 	$('li.linked, ul.linked li').click(function(event) {
 		$('li.linked, .linked li ').removeClass("active");
-		$(this).addClass("active");
+		if (this.id !='Produkter'){
+			$(this).addClass("active");
+		}
 		page = this.id;
 		loadPage();
 		
 	});
 	$('li.collapsed').click(function(){
 		$(this).toggleClass("active");
+		
 	});
 	
 	$('#languages li').click(function(event){
