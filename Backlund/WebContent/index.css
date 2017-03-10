@@ -89,7 +89,7 @@
 	display: inline-block;
 	padding-left: 10px;
 	padding-right: 10px;
-	vertical-align: midd	le;
+	vertical-align: midd le;
 }
 
 .nav-side-menu li {
@@ -148,16 +148,15 @@
 	padding: 5px;
 }
 
-.news:BEFORE{
+.news:BEFORE {
 	display: block;
-    content: "";
-    width: 20px;
-    height: 17px;
-    background: transparent url('thinker20.jpg') no-repeat;
-	
+	content: "";
+	width: 20px;
+	height: 17px;
+	background: transparent url('thinker20.jpg') no-repeat;
 }
 
-.news{
+.news {
 	padding: 15px;
 }
 
@@ -191,9 +190,42 @@
 	.nav-side-menu .menu-list .menu-content {
 		display: block;
 	}
-	.maincontainer, .bottomcontainer{
+	.maincontainer, .bottomcontainer {
 		margin-left: 270px;
 	}
+}
+
+@media only screen and (min-width : 481px) {
+	.flex-row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.flex-row>[class*='col-'] {
+		display: flex;
+		flex-direction: column;
+	}
+	.flex-row.row:after, .flex-row.row:before {
+		display: flex;
+	}
+	.flex-row .thumbnail, .flex-row .caption {
+		display: flex;
+		flex: 1 0 auto;
+		flex-direction: column;
+	}
+	.flex-text {
+		flex-grow: 1;
+	}
+	.flex-row img {
+		width: 100%;
+	}
+}
+
+html, body {height =100%
+	
+}
+
+.flex {
+	display: flex;
 }
 
 body {
@@ -202,6 +234,7 @@ body {
 	margin: 0px;
 	padding: 0px;
 }
+
 a {
 	cursor: pointer;
 }
