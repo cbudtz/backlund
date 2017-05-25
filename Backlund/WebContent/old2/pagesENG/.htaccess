@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule ^eng/(.*)$ eng/index.php
+RewriteRule ^deu/(.*)$ eng/index.php
+RewriteRule ^(.*) index.php

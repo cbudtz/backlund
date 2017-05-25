@@ -34,16 +34,14 @@
 				
 				<!-- Side Menu -->
 				<div class="nav-side-menu" id="nav-side-menu">
-					<?php include 'sidemenuDAN.php';?>
+					<?php include 'sidemenuDEU.php';?>
 				</div>
 				<!-- end sidemenu -->
 				<!-- Main container -->
 				<div class="maincontainer" id="maincontainer">
 				<?php
 				$pages = explode('/',$_SERVER['REQUEST_URI']);
-				$pagepart = $pages[count($pages)-1];
-				$subpage = explode('-', $pagepart);
-				$page = $subpage[count($subpage)-1];
+				$page = $pages[count($pages)-1];				
 				if ($page==null || $page=='') {$page='home';};
 				include $page . '.html' ;
 				?>
